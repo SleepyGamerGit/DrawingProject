@@ -23,8 +23,37 @@ public class DrawingView: UIView
     {
         let figure : UIBezierPath = UIBezierPath()
         
+        UIColor.green.setStroke()
+        figure.addArc(withCenter: CGPoint(x:200, y:000),
+                      radius: CGFloat(20),
+                      startAngle: CGFloat(0),
+                      endAngle: CGFloat(2) * CGFloat.pi,
+                      clocwise: true)
+        figure.move(to: CGPoint(x: 200, y: 220))
+        figure.addLine(to: CGPoint(x: 200, y: 270))
+        figure.move(to: CGPoint(x: 100, y:240))
+        figure.addLine(to: CGPoint(x: 220, y: 240))
+        figure.move(to: CGPoint(x: 200, y: 300))
+        figure.addLine(to: CGPoint(x: 100, y: 300))
+        figure.move(to: CGPoint(x:200, y: 270))
+        figure.addLine(to: CGPoint(x: 220, y: 300))
         
         return figure
     }
 
+    private func drawTurtle() -> Void
+    {
+        let logo = UIBezierPath()
+        UIColor.white.setFill()
+        logo.move(to: CGPoint(x: 50, y: 250))
+        logo.addline(to: CGPoint(x: 100, Y: 300))
+        logo.addLine(to: CGPoint(x:50, y: 350))
+        logo.close()
+        logo.fill()
+    }
+    
+    private func drawTriforce() -> Void
+    
+    
+    
 }
